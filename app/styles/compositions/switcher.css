@@ -1,0 +1,15 @@
+.switcher {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space);
+}
+
+.switcher > * {
+  flex-grow: 1;
+  flex-basis: calc(( var(--threshold) - 100%) * 999);
+}
+
+.switcher > :nth-last-child(n + var(--limit) - 1),
+.switcher > :nth-last-child(n + var(--limit) - 1) ~ * {
+  flex-basis: 100%;
+}
